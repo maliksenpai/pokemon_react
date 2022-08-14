@@ -1,0 +1,105 @@
+.pokemonList{
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-fill-mode: both;
+}
+
+.pokemonList.fadeOut{
+  animation-name: fadeOut;
+}
+
+.pokemonDetailCard{
+  width: 60vw;
+  height: fit-content;
+  padding-block: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.pokedexDescriptionScroll{
+  height: 200px;
+  overflow-y: auto;
+  margin-top: 30px;
+  padding-inline: 50px;
+}
+
+.pokedexDescriptionScroll ol {
+  list-style: none;
+  counter-reset: steps;
+}
+.pokedexDescriptionScroll ol li {
+  counter-increment: steps;
+}
+.pokedexDescriptionScroll ol li::before {
+  content: counter(steps);
+  margin-right: 0.5rem;
+  background: cornflowerblue;
+  color: white;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  line-height: 1.2em;
+}
+
+.pokemonDetailAccordion{
+  width: 80% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemonDetailAccordionSummary, .pokemonDetailAccordionDetail{
+  width: 100% !important;
+}
+
+.pokemonDetail{
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-fill-mode: both;
+}
+
+.pokemonDetail.fadeOut{
+  animation-name: fadeOut;
+}
+
+.pokemonDetailStatsDiv{
+  display: grid;
+  grid-template-columns: repeat(2, [col-start] 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.pokemonDetailStatsInnerDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemonCardName{
+  text-transform: capitalize;
+}
+
+.pokemonCard{
+  cursor: pointer;
+}
+
+.pokemonCard:hover{
+  opacity: 0.8;
+  transition: all .4s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
